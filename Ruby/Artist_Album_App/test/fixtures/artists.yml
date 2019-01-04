@@ -1,0 +1,24 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+# cornell = Artist.create!( :last_name => 'Cornell', :first_name => 'Chris', :gender => 'male')
+# groll = Artist.create!( :last_name => 'Groll', :first_name => 'Dave', :gender => 'male')
+# mathers = Artist.create!( :last_name => 'Mathers', :first_name => 'Marshall', :gender => 'male')
+# manilow = Artist.create!( :last_name => 'Manilow', :first_name => 'Barry', :gender => 'male')
+one:
+  firstname: Chris
+  lastname: Cornell
+  gender: male
+
+two:
+  firstname: Dave
+  lastname: Groll
+  gender: male
+
+three:
+  firstname: Marshall
+  lastname: Mathers
+  gender: male
+
+four:
+  firstname: Barry
+  lastname: Manilow
+  gender: male

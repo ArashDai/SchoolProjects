@@ -1,0 +1,16 @@
+<div class='card'>
+<h1>Editing User</h1>
+
+    <%= form_for(@user) do |f| %>
+            <%= f.email_field :email, :placeholder => 'Email Address' %><br>
+            <%= f.password_field :password, :placeholder => 'Password' %><br>
+            <%= f.text_field :address, :placeholder => 'Home Address' %><br>
+            <%= f.submit "Submit", class:"btn-submit" %>
+    <% end %>
+
+    <br>
+    <div class='card'>
+        <%= link_to 'Show', @user %> |
+        <%= link_to 'Back', users_path %>
+    </div>
+</div>

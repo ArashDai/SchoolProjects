@@ -1,0 +1,42 @@
+<%= form_for(planeflight) do |f| %>
+  <% if planeflight.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(planeflight.errors.count, "error") %> prohibited this planeflight from being saved:</h2>
+
+      <ul>
+      <% planeflight.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :plane_id_id %>
+    <%= f.text_field :plane_id_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :airline %>
+    <%= f.text_field :airline %>
+  </div>
+
+  <div class="field">
+    <%= f.label :number %>
+    <%= f.number_field :number %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fromcity %>
+    <%= f.text_field :fromcity %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tocity %>
+    <%= f.text_field :tocity %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

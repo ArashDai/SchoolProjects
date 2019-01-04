@@ -1,0 +1,28 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+# Album.create!( :title => "Audioslave", :starrating => 5, :yearrelased => 2014, :artist_id => cornell )
+# Album.create!( :title => "Foo Fighters", :starrating => 5, :yearrelased => 2014, :artist_id => groll )
+# Album.create!( :title => "The Marshall Mathers LP2", :starrating => 5, :yearrelased => 2014, :artist_id => mathers )
+# Album.create!( :title => "The Barry Manilow LP3", :starrating => 5, :yearrelased => 2014, :artist_id => manilow )
+one:
+  artist_id: one
+  title: Audioslave
+  starrating: 5
+  yearreleased: 2014
+
+two:
+  artist_id: two
+  title: Foo Fighters
+  starrating: 5
+  yearreleased: 2014
+
+three:
+  artist_id: three
+  title: The Marshall Mathers LP2
+  starrating: 5
+  yearreleased: 2014
+
+four:
+  artist_id: four
+  title: The Barry Manilow LP3
+  starrating: 5
+  yearreleased: 2014

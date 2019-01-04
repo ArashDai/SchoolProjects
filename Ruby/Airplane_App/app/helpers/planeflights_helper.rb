@@ -1,0 +1,2 @@
+module PlaneflightsHelper
+end

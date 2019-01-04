@@ -1,0 +1,13 @@
+<h1>Sign Up</h1>
+<!--
+<%= render 'form', user: @user %>
+<%= link_to 'Back', users_path %>
+-->
+<div class='card'>
+    <%= form_for(@user) do |f| %>
+        <%= f.email_field :email, :placeholder => 'Email Address' %><br>
+        <%= f.password_field :password, :placeholder => 'Password' %><br>
+        <%= f.text_field :address, :placeholder => 'Home Address' %><br>
+        <%= f.submit "Submit", class:"btn-submit" %>
+    <% end %>
+</div>

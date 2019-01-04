@@ -1,0 +1,72 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#muh" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <h1 class='hidden-xs'>Rails Against The Machine</h1>
+      <h1 class='visible-xs'>R.A.T.M.</h1>
+    </div>
+
+    <div class="collapse navbar-collapse" id='muh' >
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <%= link_to 'Logout', '/logout',method: :delete, :class => '' %>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <%= link_to 'Account Settings', edit_user_path(current_user), :class => '' %>
+            </li>
+        </ul>
+    </div>
+  </div>
+</nav>
+
+<div class='dashHeader'>
+     <h1 class='text-center'>Dashboard</h1>
+</div>
+
+<h2 class='text-center'>Your Representatives</h2>
+
+<div class='repList col-xs-12'>
+    <% @legislators['results'].each do |rep| %>
+            <div class='rep col-md-6'>
+                <div class='card'>
+                    <h3 class='col-xs-offset-1'><%= rep['title'] %>. <%= rep['first_name'] %> <%= rep['last_name'] %></h3>
+                    <h4 class='col-xs-offset-1'><%= rep['state_name'] %> <%= rep['party'] %></h4>
+                    <h5 class='col-xs-offset-1'><%= rep['phone'] %></h5>
+                    <h5 class='col-xs-offset-1'><%= rep['oc_email'] %></h5>
+                    <h5 class='col-xs-offset-1'><%= link_to rep['website'], rep['website'] %></h5>
+                    <h5 class='col-xs-offset-1'>on Twitter @ <%=  rep['twitter_id']%></h5>
+                    <h5 class='col-xs-offset-1'>Term: <%= rep['term_start'] %> - <%= rep['term_end'] %></h5>
+                </div>
+            </div>
+    <% end %>
+</div>
+
+<h2 class='text-center'>Upcoming Bills</h2>
+
+<div class='billList col-xs-12'>
+    <% @upcoming_bills_senate['results'].each do |bill| %>
+            <div class='card'>
+                <h3 class='xs-offset-1'><%=  bill['chamber'] %> bill <%=  bill['bill_id'] %> </h3>
+                <h4><%= bill['context'] %> </h4>
+                <%= link_to 'Source', bill['url'] %>
+            </div>
+    <% end %>
+
+    <% @upcoming_bills_house['results'].each do |bill| %>
+        <div class='bill'>
+            <div class='card'>
+                <h3 class='xs-offset-1'><%=  bill['chamber'] %> bill <%=  bill['bill_id'] %> </h3>
+                <h4><%= bill['context'] %> </h4>
+                <%= link_to 'Source', bill['url'] %>
+            </div>
+        </div>    
+    <% end %>
+
+</div>

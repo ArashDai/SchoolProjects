@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Planeflights</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Plane</th>
+      <th>Airline</th>
+      <th>Number</th>
+      <th>Fromcity</th>
+      <th>Tocity</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @planeflights.each do |planeflight| %>
+      <tr>
+        <td><%= planeflight.plane_id %></td>
+        <td><%= planeflight.airline %></td>
+        <td><%= planeflight.number %></td>
+        <td><%= planeflight.fromcity %></td>
+        <td><%= planeflight.tocity %></td>
+        <td><%= link_to 'Show', planeflight %></td>
+        <td><%= link_to 'Edit', edit_planeflight_path(planeflight) %></td>
+        <td><%= link_to 'Destroy', planeflight, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Planeflight', new_planeflight_path %>

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  manufacturer: Boeing
+  model: 747-100
+  seats: 400
+
+two:
+  manufacturer: Boeing
+  model: 737-300
+  seats: 128
+
+three:
+  manufacturer: Airbus
+  model: A330
+  seats: 350
+
+four:
+  manufacturer: Airbus
+  model: A321
+  seats: 135
